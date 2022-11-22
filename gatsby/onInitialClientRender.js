@@ -1,17 +1,22 @@
 import loadScript from "load-script"
 import { store } from "./wrapRootElement"
 
-export const onInitialClientRender = () => {
-  loadScript(`https://apis.google.com/js/api.js`, err => {
+import { gapi, loadClientAuth2 } from "gapi-script"
+
+export const onInitialClientRender = async () => {
+  // const clientId = process.env.GAPI_CLIENT_ID
+  const clientId =
+    "757109853889-uvjcfhd1dj0dj1pu4pfnrs62mlb44q1u.apps.googleusercontent.com"
+  let SCOPE = "https://www.googleapis.com/auth/analytics.readonly"
+
+  // if you want to use the gapi client itself
+  await loadClientAuth2(gapi, clientId, SCOPE)
+
+  loadScript("https://accounts.google.com/gsi/client", err => {
     if (err) {
       console.error("Could not load gapi")
       return
     }
-
-    var SCOPES = ["https://www.googleapis.com/auth/analytics.readonly"]
-
-    // const clientId = process.env.GAPI_CLIENT_ID
-    const clientId = "757109853889-uvjcfhd1dj0dj1pu4pfnrs62mlb44q1u.apps.googleusercontent.com"
 
     // TODO - Remove :analytics and replace it with the discovery document.
     window.gapi.load("client:auth2:analytics", () => {
@@ -28,7 +33,7 @@ export const onInitialClientRender = () => {
       ]).then(() => {
         window.gapi.client
           .init({
-            scope: SCOPES.join(" "),
+            scope: SCOPE,
             clientId,
           })
           .then(() => {

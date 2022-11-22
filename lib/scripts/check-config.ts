@@ -37,15 +37,15 @@ export const writeEnvFile = async (
 
   const measurementIdLine = `GA_MEASUREMENT_ID=${config.measurementId}`
 
-  // ;[DotEnvProductionPath, DotEnvDevelopmentPath].map(path =>
-  //   fs.writeFileSync(
-  //     path,
-  //     [gapiLine, bitlyLine, authEndpointLine, measurementIdLine].join("\n"),
-  //     {
-  //       encoding: Encoding,
-  //     }
-  //   )
-  // )
+  ;[DotEnvProductionPath, DotEnvDevelopmentPath].map(path =>
+    fs.writeFileSync(
+      path,
+      [gapiLine, bitlyLine, authEndpointLine, measurementIdLine].join("\n"),
+      {
+        encoding: Encoding,
+      }
+    )
+  )
 }
 
 const ensureNecessaryFiles = async (

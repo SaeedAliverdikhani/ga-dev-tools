@@ -10,7 +10,8 @@ export const onInitialClientRender = () => {
 
     var SCOPES = ["https://www.googleapis.com/auth/analytics.readonly"]
 
-    const clientId = process.env.GAPI_CLIENT_ID
+    // const clientId = process.env.GAPI_CLIENT_ID
+    const clientId = "757109853889-uvjcfhd1dj0dj1pu4pfnrs62mlb44q1u.apps.googleusercontent.com"
 
     // TODO - Remove :analytics and replace it with the discovery document.
     window.gapi.load("client:auth2:analytics", () => {

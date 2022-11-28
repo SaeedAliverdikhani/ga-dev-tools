@@ -1,8 +1,7 @@
 :root {
   /* tokens */
   /* font-family */
-  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-body: Vazirmatn, Roboto, sans-serif;
 
   /* palette */
   --black-fade-5: rgba(0, 0, 0, 0.05);

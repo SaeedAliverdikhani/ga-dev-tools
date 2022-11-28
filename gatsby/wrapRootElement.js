@@ -34,7 +34,7 @@ const globalTheme = createTheme({
     secondary: deepOrange,
   },
   typography: palette => ({
-    fontFamily: ['"Roboto"', "sans-serif"].join(", "),
+    fontFamily: ["Vazirmatn",'"Roboto"', "sans-serif"].join(", "),
     h1: {
       fontSize: "3.0em",
     },

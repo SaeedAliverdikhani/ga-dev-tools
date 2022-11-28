@@ -56,6 +56,7 @@ export const CampaignURLBuilder: React.FC<CampaignURLBuilderProps> = ({
         return `/campaign-url-builder/`
       case 1:
         return `/campaign-url-builder/play/`
+        // return `/campaign-url-builder/play/`
       default:
         throw new Error("No matching idx")
     }
@@ -63,7 +64,7 @@ export const CampaignURLBuilder: React.FC<CampaignURLBuilderProps> = ({
 
   return (
     <>
-      <Tabs
+      {/* <Tabs
         value={tab}
         onChange={(_e, newValue) => {
           const path = `${
@@ -74,14 +75,15 @@ export const CampaignURLBuilder: React.FC<CampaignURLBuilderProps> = ({
       >
         <Tab label="Web" />
         <Tab label="Play" />
-      </Tabs>
+      </Tabs> */}
 
-      <TabPanel value={tab} index={0}>
+      {/* <TabPanel value={tab} index={0}>
         <WebURLBuilder version={version} />
       </TabPanel>
       <TabPanel value={tab} index={1}>
         <PlayURLBuilder version={version} />
-      </TabPanel>
+      </TabPanel> */}
+      <WebURLBuilder version={version} />
     </>
   )
 }

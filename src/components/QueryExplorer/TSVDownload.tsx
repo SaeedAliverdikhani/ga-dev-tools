@@ -38,7 +38,7 @@ const TSVDownload: React.FC<TSVDownloadProps> = ({ queryResponse }) => {
   return (
     <a className={classes.download} href={csvContents} download={filename}>
       <GetApp />
-      download .tsv
+      دانلود فایل .tsv
     </a>
   )
 }

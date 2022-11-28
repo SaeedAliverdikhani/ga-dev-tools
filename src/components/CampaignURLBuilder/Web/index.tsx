@@ -59,15 +59,13 @@ export const WebURLBuilder: React.FC<WebURLBuilderProps> = ({ version }) => {
   return (
     <>
       <Typography variant="body1">
-        This tool allows you to easily add campaign parameters to URLs so you
-        can measure {customCampaigns} in Google Analytics.
+        این ابزار به شما اجازه می‌دهد تا برای کمپین‌های مورد نظر خودتان آدرس منحصر به فردی تولید کنید و با استفاده از آن نتایج را به صورت اختصاصی ارزیابی کنید.
       </Typography>
       <Typography variant="h3">
-        Enter the website URL and campaign information
+        آدرس سایت و اطلاعات کمپین مورد نظر را وارد کنید.
       </Typography>
       <Typography>
-        Fill out all fields marked with an asterisk (*), and the campaign URL
-        will be generated for you.
+        پر کردن اطلاعات در بخش‌های ستاره‌دار اجباری است.
       </Typography>
 
       <section className={classes.inputs}>
@@ -81,7 +79,7 @@ export const WebURLBuilder: React.FC<WebURLBuilderProps> = ({ version }) => {
           variant="outlined"
           helperText={
             <span>
-              The full website URL (e.g.{" "}
+              آدرس کامل سایت مورد نظر را وارد کنید. (به عنوان مثال{" "}
               <span className={classes.bold}>https://www.example.com</span>)
             </span>
           }
@@ -93,7 +91,7 @@ export const WebURLBuilder: React.FC<WebURLBuilderProps> = ({ version }) => {
           label="campaign ID"
           size="small"
           variant="outlined"
-          helperText={<span>The ads campaign id.</span>}
+          helperText={<span>آیدی کمپین مورد نظر را وارد کنید.</span>}
         />
         <TextField
           id="campaign-source"
@@ -105,8 +103,8 @@ export const WebURLBuilder: React.FC<WebURLBuilderProps> = ({ version }) => {
           variant="outlined"
           helperText={
             <span>
-              The referrer (e.g. <span className={classes.bold}>google</span>,{" "}
-              <span className={classes.bold}>newsletter</span>)
+              منبع ورودی (به عنوان مثال <span className={classes.bold}>گوگل</span>,{" "}
+              <span className={classes.bold}>شبکه‌های اجتماعی</span>)
             </span>
           }
         />
@@ -120,9 +118,9 @@ export const WebURLBuilder: React.FC<WebURLBuilderProps> = ({ version }) => {
           variant="outlined"
           helperText={
             <span>
-              Marketing medium (e.g. <span className={classes.bold}>cpc</span>,{" "}
-              <span className={classes.bold}>banner</span>,{" "}
-              <span className={classes.bold}>email</span>)
+              رسانه ورودی (به عنوان مثال <span className={classes.bold}>تبلیغات کلیکی</span>,{" "}
+              <span className={classes.bold}>ایمیل</span>,{" "}
+              <span className={classes.bold}>اینستاگرام</span>)
             </span>
           }
         />
@@ -136,9 +134,8 @@ export const WebURLBuilder: React.FC<WebURLBuilderProps> = ({ version }) => {
           variant="outlined"
           helperText={
             <span>
-              Product, promo code, or slogan (e.g.{" "}
-              <span className={classes.bold}>spring_sale</span>) One of campaign
-              name or campaign id are required.
+              نام کمپین (به عنوان مثال {" "}
+              <span className={classes.bold}>کمپین تبلیغاتی تابستان</span>) یک نام انگلیسی واضح و کوتاه
             </span>
           }
         />
@@ -149,7 +146,7 @@ export const WebURLBuilder: React.FC<WebURLBuilderProps> = ({ version }) => {
           label="campaign term"
           size="small"
           variant="outlined"
-          helperText="Identify the paid keywords"
+          helperText="کلمه کلیدی مورد نظر را مشخص کنید"
         />
         <TextField
           id="campaign-content"
@@ -158,7 +155,7 @@ export const WebURLBuilder: React.FC<WebURLBuilderProps> = ({ version }) => {
           label="campaign content"
           size="small"
           variant="outlined"
-          helperText="Use to differentiate ads"
+          helperText="اشاره به مضمون محتوای کمپین"
         />
       </section>
       <GeneratedURL
@@ -171,7 +168,7 @@ export const WebURLBuilder: React.FC<WebURLBuilderProps> = ({ version }) => {
         term={term || ""}
         content={content || ""}
       />
-      <Typography variant="h2">
+      {/* <Typography variant="h2">
         More information and examples for each parameter
       </Typography>
       <Typography variant="body1">
@@ -340,7 +337,7 @@ export const WebURLBuilder: React.FC<WebURLBuilderProps> = ({ version }) => {
             Google Ads Auto-Tagging
           </ExternalLink>
         </li>
-      </Typography>
+      </Typography> */}
     </>
   )
 }

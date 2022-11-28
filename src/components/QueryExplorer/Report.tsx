@@ -129,18 +129,18 @@ const Report: React.FC<ReportProps> = ({
   }
 
   if (queryResponse.status === APIStatus.InProgress) {
-    return <Spinner>Loading results &hellip;</Spinner>
+    return <Spinner>بارگذاری نتایج &hellip;</Spinner>
   }
 
   if (queryResponse.status === APIStatus.Error) {
     return (
       <Paper className={classes.paper}>
         <Typography variant="h4" className={classes.preamble}>
-          An error has occured
+        خطایی رخ داده است
         </Typography>
         <section className={classes.preamble}>
-          <Typography>Error code: {queryResponse.error.code}</Typography>
-          <Typography>Error message: {queryResponse.error.message}</Typography>
+          <Typography>کد خطا: {queryResponse.error.code}</Typography>
+          <Typography>پیغام خطا: {queryResponse.error.message}</Typography>
         </section>
       </Paper>
     )
@@ -158,9 +158,9 @@ const Report: React.FC<ReportProps> = ({
         </Typography>
         <Typography>
           {queryResponse.response.containsSampledData ? (
-            <>Contains sampled data.</>
+            <>حاوی داده های نمونه برداری شده.</>
           ) : (
-            <>Does not contain sampled data.</>
+            <>شامل داده های نمونه نیست.</>
           )}
         </Typography>
 
@@ -185,7 +185,7 @@ const Report: React.FC<ReportProps> = ({
           checked={includeAccessToken}
           setChecked={setIncludeAccessToken}
         >
-          include access token
+          شامل توکن دسترسی است
         </LabeledCheckbox>
         <section className={classes.reportLink}>
           <a href={permalink}>Link to this report</a>

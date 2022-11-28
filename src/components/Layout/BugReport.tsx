@@ -8,12 +8,12 @@ import BugIcon from "@material-ui/icons/BugReport"
 const BugReport: React.FC = () => {
   const onClick = React.useCallback(() => {
     navigate(
-      "https://github.com/googleanalytics/ga-dev-tools/issues/new?assignees=&labels=&template=bug_report.md&title="
+      "https://zil.ink/saeed_aliverdi"
     )
   }, [])
 
   return (
-    <Tooltip title="Report an issue.">
+    <Tooltip title="'گزارش خطا'">
       <IconButton onClick={onClick}>
         <BugIcon />
       </IconButton>

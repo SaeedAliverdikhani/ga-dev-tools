@@ -120,7 +120,7 @@ const Template: React.FC<LayoutProps & TemplateProps> = ({
         >
           <MenuIcon />
           <Typography variant="h6" className={classes.mobileHeading}>
-            GA Demos & Tools
+            ابزار تحلیل سایت راسخ
           </Typography>
         </IconButton>
         <BugReport />
@@ -142,7 +142,7 @@ const Template: React.FC<LayoutProps & TemplateProps> = ({
                 className={clsx(classes.innerNav, classes.home)}
                 variant="h2"
               >
-                <Home className={classes.homeIcon} /> Home
+                <Home className={classes.homeIcon} /> صفحه اصلی
               </Typography>
             </Link>
             {links.map(linkData => {
@@ -194,7 +194,7 @@ const Template: React.FC<LayoutProps & TemplateProps> = ({
                 className={clsx(classes.innerNav, classes.home)}
                 variant="h2"
               >
-                <Home className={classes.homeIcon} /> Home
+                <Home className={classes.homeIcon} /> صفحه اصلی
               </Typography>
             </Link>
           </li>
@@ -262,7 +262,7 @@ const Template: React.FC<LayoutProps & TemplateProps> = ({
           >
             <section className={classes.content}>
               {requireLogin && (inProgress || notStarted) && (
-                <Spinner ellipses>Checking if you're logged in</Spinner>
+                <Spinner ellipses>در حال بررسی اینکه آیا وارد سیستم شده اید یا خیر</Spinner>
               )}
               {requireLogin &&
                 successful &&
@@ -271,17 +271,16 @@ const Template: React.FC<LayoutProps & TemplateProps> = ({
                 ) : (
                   <div>
                     <Typography>
-                      You must be logged in with Google for this demo.
+                      شما باید با استفاده از اکانت گوگل فرآیند ورود به حساب کاربری را انجام دهید.
                     </Typography>
                     <Button variant="contained" color="primary" onClick={login}>
-                      Login
+                      ورود به حساب کاربری
                     </Button>
                   </div>
                 ))}
               {requireLogin && failed && (
                 <Typography>
-                  Login status could not be determined. Please ensure cookies
-                  are enabled.
+                  وضعیت ورود مشخص نشد. لطفا مطمئن شوید که کوکی‌ها فعال هستند.
                 </Typography>
               )}
               {!requireLogin && children}
@@ -289,11 +288,11 @@ const Template: React.FC<LayoutProps & TemplateProps> = ({
           </ErrorBoundary>
         </div>
         <div className={formClasses.grow} />
-        <footer className={classes.footer}>
+        {/* <footer className={classes.footer}>
           <a href={Url.termsOfService}>Terms of service</a>
           <a href={Url.privacyPolicy}>Privacy policy</a>
           <BugReport />
-        </footer>
+        </footer> */}
       </main>
     </div>
   )

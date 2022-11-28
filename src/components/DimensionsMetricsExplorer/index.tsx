@@ -21,26 +21,19 @@ export const DimensionsMetricsExplorer = () => {
   return (
     <>
       <Typography variant="body1">
-        The Dimensions & Metrics Explorer lists and describes all of the
-        dimensions and metrics available through the Core Reporting API.
+        در این بخش تمامی ابعاد و معیارهای قابل سنجش برای شما لیست شده‌اند تا بتوانید به راحتی فرآیند ارزیابی را انجام دهید.
       </Typography>
 
       <Typography variant="body1">
-        The Dimensions & Metrics Explorer has the following features:
+        در دید کلی اطلاعات زیر در این صفحه ارائه می‌گردد:
       </Typography>
 
       <Typography variant="body1">
-        <strong>Explore all of the dimensions and metrics</strong> – Search or
-        browse by group. Select a dimension or metric for additional details
-        such as descriptions and attributes.
+        <strong>همه ابعاد و معیارها را کاوش کنید</strong> –  شناسایی معیارهای مورد نظر و جستجو بر اساس گروه
       </Typography>
 
       <Typography variant="body1">
-        <strong>Identify valid combinations</strong> – Not all dimensions and
-        metrics can be queried together. Only certain dimensions and metrics can
-        be used together to create valid combinations. Select a dimension or
-        metric checkbox to see all the other values that can be combined in the
-        same query.
+        <strong>ترکیبات معتبر را شناسایی کنید</strong> – همه ابعاد و معیارها را نمی توان با هم جستجو کرد. فقط از ابعاد و معیارهای خاصی می توان با هم برای ایجاد ترکیبات معتبر استفاده کرد. برای مشاهده تمام مقادیر دیگری که می‌توانند در همان جستار ترکیب شوند، یک کادر بررسی ابعاد یا معیار خاصی را انتخاب کنید.
       </Typography>
 
       <Explorer />

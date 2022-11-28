@@ -46,7 +46,7 @@ const WarningsFor: React.FC<WarningsForProps> = ({
   const warnings = React.useMemo(() => {
     let w: JSX.Element[] = []
     if (asURL === undefined) {
-      w = w.concat([<>The website URL provided is not a valid URL.</>])
+      w = w.concat([<>آدرس وب‌سایت وارد شده معتبر نمی‌باشد!</>])
     }
     if (asURL?.hostname === "ga-dev-tools.web.app") {
       w = w.concat([

@@ -127,7 +127,7 @@ const Sort: React.FC<SortProps> = ({ columns, sort, setSortIDs }) => {
           size="small"
           variant="outlined"
           label="sort"
-          helperText="Dimensions and Metrics to sort query by."
+          helperText="مرتب سازی بر اساس ..."
         />
       )}
     />

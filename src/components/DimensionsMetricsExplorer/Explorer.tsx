@@ -121,7 +121,7 @@ const Explorer: React.FC = () => {
   useAnchorRedirects(successful(columnsRequest)?.columns)
 
   return (
-    <div>
+    <div dir="ltr">
       <Search
         searchText={searchText}
         setSearchText={setSearchText}
@@ -139,12 +139,12 @@ const Explorer: React.FC = () => {
         />
       )}
       {(inProgress(columnsRequest) || notStarted(columnsRequest)) && (
-        <div>Loading dimensions and metrics...</div>
+        <div>بارگذاری معیارها</div>
       )}
       {failed(columnsRequest) && (
         <div>
-          <Typography>There was an error calling the api.</Typography>
-          <Typography>Details:</Typography>
+          <Typography>خطایی در هنگام برقراری ارتباط با رابط برنامه نویسی کاربردی وجود دارد. </Typography>
+          <Typography>جزئیات مربوطه:</Typography>
           <PrettyJson
             tooltipText="Copy error object."
             object={failed(columnsRequest)!.error}

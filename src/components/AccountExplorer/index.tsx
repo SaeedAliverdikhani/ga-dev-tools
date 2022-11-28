@@ -107,18 +107,15 @@ const AccountExplorer = () => {
 
   return (
     <>
-      <Typography variant="h2">Overview</Typography>
+      <Typography variant="h2">ابزار جست‌وجوگر</Typography>
       <Typography variant="body1">
-        Use this tool to search or browse through your accounts, properties, and
-        views, See what accounts you have access to, and find the IDs that you
-        need for the API or for another tool or service that integrates with
-        Google Analytics.
+        با استفاده از این ابزار به تمامی داده‌های وب‌سایت خودتان دسترسی داشته باشید و در کمترین زمان به تجزیه و تحلیل آن‌ها بپردازید.
       </Typography>
       <Paper className={classes.paper}>
         <header className={classes.header}>
           <div className={classes.search}>
             <Typography variant="h3" className={classes.heading}>
-              Search for your account information&hellip;
+              برای دستیابی به اطلاعات حساب کاربری خود، جست‌وجو کنید&hellip;
             </Typography>
             <TextField
               className={classes.searchInput}
@@ -129,7 +126,7 @@ const AccountExplorer = () => {
               size="small"
             />
             <Typography variant="h3" className={classes.heading}>
-              &hellip;or browse through all your accounts
+              &hellip; یا اینکه از میان تمامی حساب کاربری انتخاب کنید
             </Typography>
             <ViewSelector
               {...selectedAPV}

@@ -89,13 +89,13 @@ const useStyles = makeStyles(theme => ({
 
 const startDateLink = (
   <ExternalLink href="https://developers.google.com/analytics/devguides/reporting/core/v3/reference#startDate">
-    start-date
+    تاریخ شروع
   </ExternalLink>
 )
 
 const endDateLink = (
   <ExternalLink href="https://developers.google.com/analytics/devguides/reporting/core/v3/reference#endDate">
-    end-date
+    تاریخ پایان
   </ExternalLink>
 )
 
@@ -242,14 +242,11 @@ export const QueryExplorer = () => {
     <UADimensionsAndMetricsRequestCtx.Provider
       value={uaDimensionsAndMetricsRequest}
     >
-      <Typography variant="h2">Overview</Typography>
+      <Typography variant="h2">معرفی عملکرد</Typography>
       <Typography variant="body1">
-        This tool lets you interact with the {coreReportingApi} by building
-        queries to get data from your Google Analytics views (profiles). You can
-        use these queries in any of the client libraries to build your own
-        tools.
+        در این بخش می‌توانید پس از مشخص کردن حساب کاربری مورد نظر یک پرس‌وجو ایجاد کنید و داده و اطلاعات مورد نظرتان را در سریع‌ترین زمان ممکن دریافت کنید.
       </Typography>
-      <Typography variant="h3">Select View</Typography>
+      <Typography variant="h3">انتخاب حساب کاربری</Typography>
       <ViewSelector
         {...accountPropertyView}
         autoFill
@@ -259,7 +256,7 @@ export const QueryExplorer = () => {
         variant="outlined"
       />
 
-      <Typography variant="h3">Set query parameters</Typography>
+      <Typography variant="h3">تعیین پارامترهای پرس‌وجو</Typography>
       <section className={classes.inputs}>
         <TextField
           InputProps={{
@@ -273,7 +270,7 @@ export const QueryExplorer = () => {
           value={viewID || ""}
           onChange={e => setViewID(e.target.value)}
           required
-          helperText={<>The unique ID used to retrieve the Analytics data.</>}
+          helperText={<>آیدی منحصر به فرد حساب کاربری شما</>}
         />
         <TextField
           InputProps={{
@@ -289,8 +286,7 @@ export const QueryExplorer = () => {
           required
           helperText={
             <>
-              The start of the date range for the data request. Format should be
-              YYYY-MM-DD. See {startDateLink} for other allowed values.
+              تاریخ شروع
             </>
           }
         />
@@ -308,8 +304,7 @@ export const QueryExplorer = () => {
           required
           helperText={
             <>
-              The end of the date range for the data request. Format should be
-              YYYY-MM-DD. See {endDateLink} for other allowed values.
+              تاریخ پایان
             </>
           }
         />
@@ -317,12 +312,12 @@ export const QueryExplorer = () => {
           required
           selectedMetrics={selectedMetrics}
           setMetricIDs={setSelectedMetricIDs}
-          helperText="Metrics to include in the query."
+          helperText="معیارهای مورد نظر"
         />
         <DimensionsPicker
           selectedDimensions={selectedDimensions}
           setDimensionIDs={setSelectedDimensionIDs}
-          helperText="Dimensions to include in the query."
+          helperText="ابعاد مورد نظر"
         />
         <Sort
           columns={(selectedDimensions || []).concat(selectedMetrics || [])}
@@ -340,7 +335,7 @@ export const QueryExplorer = () => {
           id="filters"
           label="filters"
           fullWidth
-          helperText="The filters to apply to the query."
+          helperText="فیلترهای مورد نظر"
         />
         <UASegmentsRequestCtx.Provider value={uaSegmentsRequest}>
           <SegmentPicker
@@ -354,12 +349,12 @@ export const QueryExplorer = () => {
           setChecked={setShowSegmentDefiniton}
           className={classes.showSegments}
         >
-          Show segment definitions instead of IDs.
+          به جای آیدی، تعاریف بخش‌ها نشان داده شود.
         </LabeledCheckbox>
         <V3SamplingLevelPicker
           samplingLevel={samplingValue}
           setSamplingLevel={setSamplingValue}
-          helperText="The sampling level to use for the query."
+          helperText="سطح نمونه گیری برای استفاده از پرس و جو."
         />
         <TextField
           InputProps={{
@@ -370,7 +365,7 @@ export const QueryExplorer = () => {
           id="start-index"
           label="start index"
           fullWidth
-          helperText="The start index for the result. Indices are 1-based."
+          helperText="شاخص شروع برای تعیین نتیجه. شاخص‌ها بر مبنای 1 هستند."
           value={startIndex || ""}
           onChange={e => setStartIndex(e.target.value)}
         />
@@ -383,7 +378,7 @@ export const QueryExplorer = () => {
           id="max-results"
           label="max results"
           fullWidth
-          helperText="Maximum number of rows to include in the response."
+          helperText="حداکثر تعداد ردیف‌هایی که باید در نتیجه گنجانده شود."
           value={maxResults || ""}
           onChange={e => setMaxResults(e.target.value)}
         />
@@ -396,14 +391,14 @@ export const QueryExplorer = () => {
             })
           }
         >
-          Run Query
+          اجرای پرس‌وجو
         </PAB>
         <LabeledCheckbox
           checked={includeEmptyRows}
           setChecked={setIncludeEmptyRows}
           className={classes.includeEmpty}
         >
-          include empty rows
+          شامل ردیف‌های خالی باشد
         </LabeledCheckbox>
       </section>
       <Report

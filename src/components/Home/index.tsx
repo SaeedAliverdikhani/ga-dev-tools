@@ -33,33 +33,30 @@ const IndexPage: React.FC = () => {
         src="../../images/google-analytics-partners-2x.png"
       />
       <Typography variant="h2" id="about">
-        About This Site
+        درباره این سایت
       </Typography>
       <Typography variant="body1">
-        <b>Google Analytics Demos & Tools</b> is a resource for users and
-        developers to discover what's possible with the Google Analytics
-        Platform. Learn how to implement GA and applications that can be built
-        to take advantage of the flexibility and power of Google Analytics.
+        <b>ابزار تجزیه و تحلیل راسخ</b> منبعی برای کاربران و توسعه دهندگان یک وب‌سایت است تا آن اطلاعاتی را که امکان پذیر است، بدست بیاورند. 
       </Typography>
-      <Typography variant="body1">
+      {/* <Typography variant="body1">
         The code for this entire site is open source and{" "}
         <ExternalLink href={Url.gaDevToolsGitHub}>
           available on GitHub
         </ExternalLink>
         . We encourage you to take a look if you'd like to see how anything is
         done.
-      </Typography>
-      <Typography variant="h3">Support for UA & GA4</Typography>
+      </Typography> */}
+      <Typography variant="h3">بهینه‌سازی وب‌سایت</Typography>
       <Typography variant="body1">
-        There is support for both Universal Analytics (UA) and Google Analytics
-        4 (GA4). Click the toggle in the nav bar to switch between the UA and
-        GA4 versions of the site.
+      با استفاده از نتایج ابزار تحلیلی و راهکارهای مطرح شده در سامانه راسخ سایت خود را به بهترین شکل ممکن برای موتورهای جست‌وجو بهینه‌سازی کنید، تا رتبه بهتری در صفحه نتایج کسب کنید.
       </Typography>
-      <Typography variant="h3">Demos</Typography>
+      <Typography variant="h3">آمار تحلیلی سایت</Typography>
       <Typography variant="body1">
-        Live demos to help you learn about Google Analytics features.
+      تحلیل کردن به صورت کلی به معنی تجزیه یک موضوع، به بخش‌های کوچک‌تر برای فهم بهتر آن است. منظور از تحلیل سایت، سنجش، جمع آوری و تهیه گزارش از داده‌ها و اطلاعات است. این کار با هدف درک و بهینه کردن مواردی که گفته شد، صورت می‌گیرد.
+
+اگر بدانید آنالیز وضعیت سئو سایت شما چگونه است، آنگاه می‌توانید یک تحلیل اختصاصی از عملکرد بهینه سازی سایت داشته باشید. با استفاده این سامانه، می‌توانید به تمامی اطلاعات وب‌سایت خودتان دسترسی داشته باشید و وضعیت سئو آن را تجزیه و تحلیل کنید.
       </Typography>
-      <Typography variant="body1" component="ul">
+      {/* <Typography variant="body1" component="ul">
         <li>Working demos with actual data sent to Google Analytics.</li>
         <li> Use these demos as a reference for your own implementation.</li>
         <li>Interactive elements that provide implementation code snippets.</li>
@@ -114,7 +111,7 @@ const IndexPage: React.FC = () => {
           section of the developers site to find the best place to get your
           questions answered.
         </li>
-      </Typography>
+      </Typography> */}
     </>
   )
 }

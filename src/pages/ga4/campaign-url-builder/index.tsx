@@ -24,9 +24,9 @@ import { IS_SSR } from "@/hooks"
 export default ({ location: { pathname } }) => {
   return (
     <Layout
-      title="Campaign URL Builder"
+      title="ساخت آدرس قابل ردیابی برای کمپین‌ها"
       pathname={pathname}
-      description="This tool allows you to easily add campaign parameters to URLs so you can measure Custom Campaigns in Google Analytics."
+      description=""
     >
       {IS_SSR ? null : (
         <CampaignURLBuilder

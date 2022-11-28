@@ -24,24 +24,25 @@ import ExternalLink from "@/components/ExternalLink"
 const SpreadsheetAddOn = ({ location: { pathname } }) => {
   return (
     <Layout
-      title="Spreadsheet Add-on"
+      title=" افزونه Spreadsheet"
       pathname={pathname}
-      description="The Google Analytics Spreadsheet Add-on makes it easier for Google Analytics users to access, visualize, share, and manipulate their data in Google Spreadsheets."
+      description=""
     >
-      <Typography variant="h2">Overview</Typography>
+      <Typography variant="h2">معرفی کلی افزونه</Typography>
 
       <Typography variant="body1">
-        The{" "}
+        {/* The{" "}
         <ExternalLink href={Url.spreadsheetAddOn}>
           Google Analytics Spreadsheet Add-on
-        </ExternalLink>{" "}
-        makes it easier for Google Analytics users to access, visualize, share,
-        and manipulate their data in Google Spreadsheets. The add-on gives you
-        the full power of the Google Analytics{" "}
+        </ExternalLink>{" "} */}
+        افزونه‌های  گوگل شیت اساساً برنامه‌های واسطی هستند که می‌توانید آنها را نصب کنید تا برخی عملکردهای اضافی را به برنامه صفحه گسترده خود وارد کنید. برای مثال، می‌توانید از افزونه‌ها برای ارسال ایمیل‌های جیمیل خود بر اساس برنامه زمان‌بندی استفاده کنید.
+
+        افزونه مورد نظر دسترسی، ترسیم نمودار، اشتراک‌گذاری و دستکاری داده‌های خود را در صفحات گسترده گوگل برای کاربران سامانه راسخ آسان‌تر می‌کند. این افزونه بدون نیاز به دانستن یا نوشتن کد، قدرت کامل تحلیل داده‌ها را برای شما فراهم می‌کند.
+        {/* {" "}
         <ExternalLink href={Url.reportingApis}>
           Core and Multi-Channel Funnels Reporting APIs
         </ExternalLink>{" "}
-        without requiring you to know or write any code.
+        without requiring you to know or write any code. */}
       </Typography>
 
       <a href={Url.spreadsheetAddOnExternal}>
@@ -52,41 +53,37 @@ const SpreadsheetAddOn = ({ location: { pathname } }) => {
       </a>
 
       <Typography variant="caption" paragraph>
-        A Google Analytics Spreadsheet Add-on report
+        افزونه Spreadsheet Add-on 
       </Typography>
 
-      <Typography variant="body1">With this tool, you can:</Typography>
+      <Typography variant="body1">با استفاده از این ابزار شما می‌توانید:</Typography>
 
       <Typography variant="body1" component="ul">
-        <li>Query data from multiple views.</li>
-        <li>Create custom calculations from your report data.</li>
+        <li>داده‌ها را از چند دیدگاه جستجو کنید.</li>
+        <li>محاسبات سفارشی را از داده‌های گزارش خود ایجاد کنید.</li>
         <li>
-          Create visualizations with the built-in visualization tools, and embed
-          those visualizations on third-party websites.
+          با استفاده از ابزارهای بصری سازی، نمودارهای مختلفی ترسیم کنید و سپس از آن‌ها برای ارائه اطلاعات در گزارش‌ها و وب‌سایت دیگر استفاده کنید.
         </li>
-        <li>Schedule your reports to run and update automatically.</li>
+        <li>گزارش های خود را برای به‌روز رسانی خودکار برنامه‌ریزی کنید.</li>
         <li>
-          Easily control who can see your data and visualizations by leveraging
-          Google Spreadsheet's existing sharing and privacy features.
+        با استفاده از ویژگی‌های اشتراک‌گذاری و حریم خصوصی موجود این افزونه، به راحتی کنترل کنید چه کسی می‌تواند داده‌ها و تصاویر شما را ببیند.
         </li>
       </Typography>
 
-      <Typography variant="h2">Learn More</Typography>
+      <Typography variant="h2">آموزش بیشتر</Typography>
 
       <Typography variant="body1">
-        To start using the Google Analytics Spreadsheet add-on you can simply
-        download it from the{" "}
+        برای استفاده از این افزونه کافیست با {" "}
         <ExternalLink href={Url.spreadsheetAddOnExternal}>
-          Chrome Web Store
+          کلیک بر روی این لینک
         </ExternalLink>{" "}
-        and try adding it to one of your spreadsheets today.
+        آن را دانلود و نصب کنید.
       </Typography>
 
       <Typography variant="body1">
-        If you have questions, check out the{" "}
-        <ExternalLink href={Url.spreadsheetAddOn}>solution guide</ExternalLink>{" "}
-        which explains how to install and use the add-on and goes over each
-        option in detail.
+        سپس اگر با چالش و سوالی رو‌به‌رو شدید از {" "}
+        <ExternalLink href={Url.spreadsheetAddOn}>راهنمای مرجع</ExternalLink>{" "}
+        که توسط سازندگان این افزونه آماده شده است استفاده کنید.
       </Typography>
     </Layout>
   )

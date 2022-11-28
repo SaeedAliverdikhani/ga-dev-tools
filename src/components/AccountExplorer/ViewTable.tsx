@@ -117,7 +117,7 @@ const PropertyCell: React.FC<{
   search: string | undefined
 }> = ({ property, classes, search }) => {
   if (property === undefined) {
-    return <TableCell>No UA properties for account.</TableCell>
+    return <TableCell>هیچ جزئیاتی از اکانت آنالیتیکس یافت نشد.</TableCell>
   }
 
   return (
@@ -150,7 +150,7 @@ const ViewCell: React.FC<{
   search: string | undefined
 }> = ({ account, property, view, classes, search }) => {
   if (view === undefined) {
-    return <TableCell colSpan={2}>No UA views for account.</TableCell>
+    return <TableCell colSpan={2}>هیج دیدکاهی برای این اکانت آنالیتیکس یافت نشد.</TableCell>
   }
   const viewUrl = `https://analytics.google.com/analytics/web/#/report/vistors-overview/a${account?.id}w${property?.internalWebPropertyId}p${view?.id}`
   return (
@@ -210,17 +210,17 @@ const ViewsTable: React.FC<ViewTableProps> = ({
     >
       <TableHead>
         <TableRow>
-          <TableCell>Account</TableCell>
-          <TableCell>Property</TableCell>
-          <TableCell>View</TableCell>
-          <TableCell>Table ID</TableCell>
+          <TableCell>حساب کاربری</TableCell>
+          <TableCell>نوع</TableCell>
+          <TableCell>دیدگاه</TableCell>
+          <TableCell>آیدی</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
         {flattenedViewsRequest.status === RequestStatus.Successful ? (
           flattenedViewsRequest.flattenedViews.length === 0 ? (
             <TableRow data-testid="components/ViewTable/no-results">
-              <TableCell colSpan={4}>No results</TableCell>
+              <TableCell colSpan={4}>نتیجه‌ای یافت نشد</TableCell>
             </TableRow>
           ) : (
             flattenedViewsRequest.flattenedViews.map(apv => {
@@ -253,7 +253,7 @@ const ViewsTable: React.FC<ViewTableProps> = ({
           <TableRow data-testid="components/ViewTable/no-results">
             <TableCell colSpan={4}>
               <Spinner>
-                <Typography>Loading views&hellip;</Typography>
+                <Typography>بارگذاری دیدگاه‌ها&hellip;</Typography>
               </Spinner>
             </TableCell>
           </TableRow>

@@ -18,9 +18,9 @@ import Home from "@/components/Home"
 
 const IndexPage = ({ location: { pathname } }) => (
   <Layout
-    title="Discover the Google Analytics platform"
+    title="ابزار تجزیه و تحلیل سایت | سامانه راسخ"
     pathname={pathname}
-    description="Google Analytics Demos & Tools is a resource for users and developers to discover what's possible with the Google Analytics Platform. Learn how to implement GA and applications that can be built to take advantage of the flexibility and power of Google Analytics."
+    description="با استفاده از سامانه راسخ و ابزار تحلیل آن، به تمامی داده‌های مربوط به سایت خودتان دسترسی داشته باشید و آن‌ها را راحت و سریع آنالیز کنید."
   >
     <Home />
   </Layout>

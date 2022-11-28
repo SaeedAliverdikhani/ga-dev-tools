@@ -23,7 +23,7 @@ const ErrorFallback: React.FC<FallbackProps> = ({
 
   return (
     <section role="alert" className={classes.error}>
-      <Typography variant="h3">Something went wrong</Typography>
+      <Typography variant="h3">به نظر می‌رسد خطایی وجود دارد</Typography>
       <Warning>{error.message}</Warning>
       <CodeBlock codeBlocks={[{ code: error.stack!, title: "Error stack" }]} />
       <PAB className={classes.resetButton} onClick={resetErrorBoundary}>

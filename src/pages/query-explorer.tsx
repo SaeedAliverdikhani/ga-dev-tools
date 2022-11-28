@@ -20,10 +20,10 @@ import QueryExplorer from "@/components/QueryExplorer"
 export default ({ location: { pathname } }) => {
   return (
     <Layout
-      title="UA Query Explorer"
+      title="جست‌وجوگر پرس‌وجو"
       requireLogin
       pathname={pathname}
-      description="Interact with the Core Reporting API by building queries to get data from your Google Analytics views."
+      description=""
     >
       <QueryExplorer />
     </Layout>

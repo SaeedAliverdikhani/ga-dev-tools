@@ -138,15 +138,15 @@ const GroupInfoTemplate: React.FC<
         </a>
       </Typography>
       <Link to="/dimensions-metrics-explorer" className={classes.returnLink}>
-        <ArrowBack /> Dimensions & Metrics Explorer
+        <ArrowBack /> جست‌وجوگر معیارها
       </Link>
-      <Typography variant="h3">Dimensions</Typography>
+      <Typography variant="h3">ابعاد</Typography>
       {sortBy(dimensions, column =>
         column.attributes?.status === "PUBLIC" ? 0 : 1
       ).map(item => (
         <ColumnInfo key={item.id} column={item} />
       ))}
-      <Typography variant="h3">Metrics</Typography>
+      <Typography variant="h3">معیارها</Typography>
       {sortBy(metrics, column =>
         column.attributes?.status === "PUBLIC" ? 0 : 1
       ).map(item => (

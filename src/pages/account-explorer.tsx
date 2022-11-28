@@ -19,10 +19,10 @@ import AccountExplorer from "@/components/AccountExplorer"
 export default ({ location: { pathname } }) => {
   return (
     <Layout
-      title="Account Explorer"
+      title="جست‌وجوگر حساب کاربری"
       requireLogin
       pathname={pathname}
-      description="Use this tool to search or browse through your google analytics accounts, properties, and views."
+      description="حساب کاربری مورد نظر خود را برای دریافت داده مشخص کنید."
     >
       <AccountExplorer />
     </Layout>

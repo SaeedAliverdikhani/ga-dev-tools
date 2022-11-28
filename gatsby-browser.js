@@ -2,6 +2,8 @@ import * as React from "react"
 import {StoreProvider} from "./src/components/ga4/EnhancedEcommerce/store-context"
 import CustomLayout from "./gatsby/wrapRootElement.js"
 import "./src/styles/ecommerce/variables.css"
+import "./src/styles/global.css"
+
 
 // TODO - look into making this work like gatsby-node & use typescript for the
 // things that are imported/exported.

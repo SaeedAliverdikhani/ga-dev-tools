@@ -2,7 +2,6 @@
   "name": "ga-dev-tools",
   "repository": {
     "type": "git",
-    "url": "git://github.com/googleanalytics/ga-dev-tools.git"
   },
   "license": "Apache-2.0",
   "dependencies": {

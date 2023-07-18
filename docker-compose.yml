@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  
+  ga-dev-tools:
+    build: .
+    container_name: ga-dev-tools
+    ports:
+      - "8090:80"

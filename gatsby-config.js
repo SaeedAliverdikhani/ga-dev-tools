@@ -12,6 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+require("dotenv").config({
+  path: '.env',
+})
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+
 module.exports = {
   flags: {
     PRESERVE_WEBPACK_CACHE: true,

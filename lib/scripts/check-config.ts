@@ -310,7 +310,7 @@ const toRuntimeJson = (
   let asserted: RuntimeJson
   try {
     asserted = assertAllValues(fullConfig)
-  } catch (e) {
+  } catch (e: any) {
     console.error(e.message)
     process.exit(1)
   }
